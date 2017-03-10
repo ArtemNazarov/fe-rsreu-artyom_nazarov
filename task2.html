@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Basics</title>
+    <style type="text/css">
+        #Glossary {
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>HTML Basics</h1>
+    <h2>Lists</h2>
+    <h3>Ordered list</h3>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+    <h3>Unordered list</h3>
+    <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+        <li>E</li>
+    </ul>
+    <div id="Glossary">
+    <dl>
+    <dt>Термин 1</dt>
+        <dd>Определение 1</dd>
+    
+    <dt>Термин 2</dt>
+        <dd>Определение 2</dd>
+    </dl>
+    <ul>
+        <li>Товары
+            <ul>
+            <li>Товар 1</li>
+            <li>Товар 2</li>
+            <li>Товар 3</li>
+            </ul>
+        </li>
+        <li>Инструменты
+            <ul>
+                <li>По дереву
+                    <ul>
+                        <li>Шуруповёрты</li>
+                        <li>Молотки</li>
+                    </ul>
+                </li>
+                <li>По металлу</li>
+            </ul>
+        </li>
+        <li>Поставщики товаров</li>
+    </ul>
+    </div>
+
+    <h3>List with links</h3>    
+    <ul>
+        <li><a href="http://www.z0r.de">Ha-ha!</a></li>
+        <li><a href="http://www.slither.io">Let's play!</a></li>
+    </ul>
+    
+    <hr>
+    
+    <h2>Paragraph</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolorem neque repudiandae provident sapiente, earum, expedita ratione unde debitis voluptatum est itaque necessitatibus adipisci eligendi, temporibus? Repudiandae, quia ullam repellat.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, quo veritatis, blanditiis, consequatur qui facere cumque facilis libero tenetur ipsa quis minus odio laborum eos excepturi natus expedita fuga tempora!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores ea odio aliquid fuga necessitatibus consequatur corrupti quam sunt reiciendis cupiditate iure, suscipit eveniet, quidem maxime tempora soluta quaerat, excepturi officia.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit impedit aperiam magnam molestias. Ex ea, voluptatum assumenda. Numquam enim rerum nisi, debitis ex facere molestiae eligendi accusamus mollitia sequi nihil?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae omnis molestiae alias corporis dolor vitae aliquid reiciendis fugit consequatur, fuga qui soluta consectetur odio dolores libero, fugiat tenetur illum culpa?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse nobis modi temporibus aliquid aliquam amet porro neque quia aspernatur obcaecati et deserunt aperiam cum, rem, voluptates iusto, debitis quam quae?
+    </p>
+    
+    <h2>Tables</h2>
+    
+    <table border=10 style="border-collapse: collapse">
+        <th>First name</th>
+        <th>Last name</th>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+        </tr>
+        <tr>
+            <td>Jane</td>
+            <td>Doe</td>
+        </tr>
+    </table>
+    
+    <h2>Image</h2>
+    <img src="/home/artem/Изображения/Снимок экрана из 2017-03-10 10:40:09.png" alt="Мой рабочий стол" title="Мой рабочий стол" width=1280 height=640>
+    
+    <h2>Pre tag</h2>
+    <pre>
+        import java.sql.*;
+        import java.util.Properties;
+
+        public class ConnToMySQL {
+            // The JDBC Connector Class.
+            private static final String dbClassName = "com.mysql.jdbc.Driver";
+
+            // Connection string. emotherearth is the database the program
+            // is connecting to. You can include user and password after this
+            // by adding (say) ?user=paulr&password=paulr. Not recommended!
+
+            private static final String CONNECTION =
+                    "jdbc:mysql://127.0.0.1/employees";
+
+            private static Statement stmt;
+            private static ResultSet rs;
+
+            public static void main(String[] args) throws
+                    ClassNotFoundException,SQLException
+            {
+                System.out.println(dbClassName);
+                // Class.forName(xxx) loads the jdbc classes and
+                // creates a drivermanager class factory
+                Class.forName(dbClassName);
+
+                // Properties for user and password. Here the user and password are both 'paulr'
+                Properties p = new Properties();
+                p.put("user","root");
+                p.put("password","ujnrgdt9");
+                String query = "select * from papapa";
+
+                // Now try to connect
+                Connection c = DriverManager.getConnection(CONNECTION,p);
+                // getting Statement object to execute query
+                stmt = c.createStatement();
+
+                // executing SELECT query
+                rs = stmt.executeQuery(query);
+                while (rs.next()) {
+                    int count = rs.getInt(1);
+                    System.out.println("Total number of books in the table : " + count);
+                }
+                c.close();
+            }
+        }
+    </pre>
+</body>
+</html>
