@@ -1,0 +1,94 @@
+@import url(http://fonts.googleapis.com/css?family=Barrio);
+@import url(http://fonts.googleapis.com/css?family=Podkova);
+@import url(http://fonts.googleapis.com/css?family=Nova+Mono);
+body {
+	background-image: url("1.jpg");
+}
+
+#block1 {
+	position: absolute;
+	left: 200px;
+	right: 330px;
+	text-align: center;
+	font-family: 'Barrio';
+	background-color: rgba(31, 123, 181, 0.4);
+}
+
+#block2 {
+	position: absolute;
+	height: 300px;
+	width: 500px;
+	top: 200px;
+	font-family: 'Podkova', serif;
+	font-weight: 600;
+	font-variant: normal;
+	text-align: center;
+	font-size: 20pt;
+	line-height: 20px;
+	background-color: rgba(56, 181, 31, 0.4);
+	word-spacing: 20px;
+}
+
+#block2 span {
+	font-variant: small-caps;
+}
+
+#block3 {
+	position: absolute;
+	height: 300px;
+	width: 400px;
+	top: 200px;
+	right: 20px;
+	font-family: 'Nova Mono', monospace;
+	font-weight: 700;
+	text-align: center;
+	font-size: 20pt;
+	vertical-align: bottom;
+	background-color: rgba(56, 181, 31, 0.4);
+}
+
+#block3 sub {
+	vertical-align: sub;
+}
+
+#block3 sup {
+	vertical-align: 3px;
+}
+
+#block4 {
+	position: absolute;
+	bottom: 5px;
+	left: 200px;
+	right: 330px;
+	text-align: center;
+	background-color: rgba(0, 0, 0, 0.4);
+	color: aliceblue;
+}
+
+#block5 {
+	position: absolute;
+	height: 70px;
+	width: 500px;
+	top: 600px;
+	font-family: 'Podkova', serif;
+	font-size: 20pt;
+	font-weight: 100;
+	text-align: right;
+	background-color: rgba( 245, 230, 66, 0.589);
+	white-space: pre-line;
+	text-shadow: 2px 2px black;
+}
+
+#block6{
+	position: absolute;
+	background-color: rgba( 64, 119, 236, 0.589 );
+	height: 120px;
+	width: 500px;
+	top: 750px;
+	font-weight: 200;
+	font-size: 15px;
+	text-indent: 2em;
+	text-align: justify;
+	letter-spacing: 10px;
+	direction: rtl;
+}
