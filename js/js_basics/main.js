@@ -4,7 +4,7 @@ function isNumber(numberToCheck) {
     return Boolean((typeof numberToCheck === 'number') && (!isNaN(numberToCheck)) && (isFinite(numberToCheck)));
 }
 
-function isZero(numberToCheck){
+function isZero(numberToCheck) {
     'use strict';
 
     return Boolean(isNumber(numberToCheck) && numberToCheck === 0);
@@ -47,7 +47,7 @@ function calculateTriangleArea(sideA, sideB, sideC) {
             * (half_perimeter - sideC)
             * half_perimeter
         );
-        document.getElementById("result").innerHTML = area;
+        document.getElementById('result').innerHTML = area;
     } else {
         throw new Error(
             'Error in triangle area calculating! Two sides of triangle can\'t be less than third!'
@@ -67,7 +67,7 @@ function checkTriangle(aside, bside, cside) {
     ) {
         return (((aside + bside) > cside) || ((bside + cside) > aside) || ((aside + cside) > bside))
     } else {
-        throw new Error ("Error in sides check! You entered not numbers or not positive numbers");
+        throw new Error('Error in sides check! You entered not numbers or not positive numbers');
     }
 
     return false;
@@ -171,15 +171,17 @@ function postfixAndPrefix() {
 function checkSign(value) {
     'use strict';
 
-    if (value < 0) {
-        return 'negative';
-    } else if (value > 0) {
-        return 'positive';
-    } else if (value === 0) {
-        return 'zero';
+    if (isNaN(value)) {
+        throw new Error('Error! You entered undefined or NaN!')
+    } else if (value < 0) {
+            return 'negative';
+        } else if (value > 0) {
+            return 'positive';
+        } else if (value === 0) {
+            return 'zero';
+        }
     }
 
-    return 'undefined or NaN';
 }
 
 function checkNumberSign() {
@@ -237,7 +239,7 @@ function factorial(n) {
     if (isNumber(n) && (isPositive(n) || (isZero(n)))) {
         return (n === 0) ? 1 : n * factorial(n - 1);
     } else {
-        throw new Error ("Error in factorial calculating! You entered not numbers or not positive numbers");
+        throw new Error('Error in factorial calculating! You entered not numbers or not positive numbers');
     }
 }
 
