@@ -1,6 +1,7 @@
-"use strict"
 
 function isNumber(check) {
+    'use strict';
+
     var del = check % 1;
 
     if ((typeof check === 'number') && (del === 0)) {
@@ -10,17 +11,23 @@ function isNumber(check) {
 }
 
 function isNegative(check) {
+    'use strict';
+
     if (check < 0)
         return true;
     return false;
 }
 function isPositive(check) {
+    'use strict';
+
     if (check > 0)
         return true;
     return false;
 }
 
 function checkResult(val) {
+    'use strict';
+
     if (isNumber(val))
         console.log("The value of " + val + " is a number");
     else
@@ -28,6 +35,8 @@ function checkResult(val) {
 }
 
 function first_Task() {
+    'use strict';
+
     var str = "String";
     var number = 2;
 
@@ -37,6 +46,8 @@ function first_Task() {
 }
 
 function printResult(val, negFlag, numberFlag, posFlag) {
+    'use strict';
+
     if (numberFlag) {
         console.log("The value of " + val + " is a number");
         if (negFlag)
@@ -53,6 +64,8 @@ function printResult(val, negFlag, numberFlag, posFlag) {
 }
 
 function checkResultWithSign(val) {
+    'use strict';
+
     if (isNumber(val)) {
         if (isNegative(val)) {
             printResult(val, true, true, false);
@@ -70,10 +83,12 @@ function checkResultWithSign(val) {
 }
 
 function secondAndThirdTask() {
-    console.log("-second-and-third-task-");
+    'use strict';
+
     var number = 2;
     var string = "str";
 
+    console.log("-second-and-third-task-");
     checkResultWithSign(number);
     number = -2;
     checkResultWithSign(number);
@@ -81,6 +96,8 @@ function secondAndThirdTask() {
 }
 
 function fourthFindFactorial() {
+    'use strict';
+
     var number = 17;
 
     console.log("------fourth-task------");
@@ -94,10 +111,13 @@ function fourthFindFactorial() {
 
 
 function factorial(n) {
+    'use strict';
     return n !== 1 ? n * factorial(n - 1) : 1;
 }
 
 function isPrime(n) {
+    'use strict';
+
     if (n % 2 === 0) {
         if (n === 2) {
             return true;
@@ -112,6 +132,8 @@ function isPrime(n) {
 }
 
 function checkIfIsPrime(number) {
+    'use strict';
+
     if (isNumber(number)) {
         if (isPrime(number))
             console.log("The value of " + number + " is a prime number");
@@ -124,6 +146,8 @@ function checkIfIsPrime(number) {
 }
 
 function fifthTask() {
+    'use strict';
+
     console.log("-------fifth-task------");
     for (var number = 2; number < 20; number++) {
         checkIfIsPrime(number);
