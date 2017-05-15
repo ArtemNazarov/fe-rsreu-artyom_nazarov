@@ -3,41 +3,45 @@ var Calculator = (function (Check) {
 
     var currentValue = 0;
 
-    function add(value) {
+    function add() {
 
         for (var i = 0; i < arguments.length; i++) {
-            if (!isNumber(value)) {
+            if (!Check.isNumber(arguments[i])) {
                 throw new Error('Error! You entered not a number');
             }
             currentValue += arguments[i];
         }
+        return add;
     }
 
-    function subtract(value) {
+    function subtract() {
         for (var i = 0; i < arguments.length; i++) {
-            if (!isNumber(value)) {
+            if (!Check.isNumber(arguments[i])) {
                 throw new Error('Error! You entered not a number');
             }
             currentValue -= arguments[i];
         }
+        return subtract;
     }
 
-    function multiply(value) {
+    function multiply() {
         for (var i = 0; i < arguments.length; i++) {
-            if (!isNumber(value)) {
+            if (!Check.isNumber(arguments[i])) {
                 throw new Error('Error! You entered not a number');
             }
             currentValue *= arguments[i];
         }
+        return multiply;
     }
 
-    function divide(value) {
+    function divide() {
         for (var i = 0; i < arguments.length; i++) {
-            if (!isNumber(value)) {
+            if (!Check.isNumber(arguments[i])) {
                 throw new Error('Error! You entered not a number');
             }
             currentValue /= arguments[i];
         }
+        return divide;
     }
 
     function getResult() {
